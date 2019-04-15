@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div *ngIf="empregado" class="col-md-12 order-md-1">
+      <p class="text-monospace"><strong>Nome: </strong> {{empregado.nome}}</p>
+      <p class="text-monospace"><strong>Sobrenome: </strong> {{empregado.sobrenome}}</p>
+      <p class="text-monospace"><strong>Email: </strong> {{empregado.email}}</p>
+      <p class="text-monospace"><strong>Genero: </strong> {{empregado.genero}}</p>
+      <p class="text-monospace"><strong>Telefone: </strong> {{empregado.telefone}}</p>
+      <p class="text-monospace"><strong>Active: </strong> {{empregado.active}}</p>
+      <span class="btn-sm is-small btn-primary" *ngIf='empregado.active' (click)='atualizarActive(false)'>Inactive</span>
+      <span class="btn-sm is-small btn-primary" *ngIf='!empregado.active' (click)='atualizarActive(true)'>Active</span>
+    </div>
+  </div>
+</div>
+
